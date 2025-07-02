@@ -1,0 +1,44 @@
+
+<app-header></app-header>
+<router-outlet></router-outlet>
+
+
+
+
+<div class="nav-bar-vertical">
+  <a [routerLink]="['/perfil']">Perfil</a>
+  <a [routerLink]="['/carrito']">Carrito</a>
+  <a [routerLink]="['/torta']">torta</a>
+  <a [routerLink]="['/rubro']">Rubro</a>
+  <a [routerLink]="['/buscar']">Buscar</a>
+</div>
+
+<style>
+  .nav-bar-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 28px;
+    background-color: orange;
+    border-radius: 10px;
+    width: 200px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  .nav-bar-vertical a {
+    text-decoration: none;
+    color: #fff7f0;
+    font-weight: 600;
+    padding: 10px 15px;
+    width: 100%;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    background-color: #33d6d1;
+  }
+
+  .nav-bar-vertical a:hover {
+    background-color: #ffcce0;
+  }
+</style>
