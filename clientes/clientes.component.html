@@ -1,0 +1,26 @@
+<p>clientes works!</p>
+<h2 class="titulo">Clientes</h2>
+
+<form (ngSubmit)="agregarCliente()" class="form-cliente">
+    <input type="text" [(ngModel)]="nuevoCliente.nombre" name="nombre" placeholder="Nombre completo" required>
+    <input type="text" [(ngModel)]="nuevoCliente.dni" name="dni" placeholder="DNI" required>
+    <input type="text" [(ngModel)]="nuevoCliente.telefono" name="telefono" placeholder="Teléfono">
+    <button type="submit">Agregar Cliente</button>
+</form>
+
+<table class="tabla-clientes">
+    <thead>
+    <tr>
+        <th>Nombre</th>
+        <th>DNI</th>
+        <th>Teléfono</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let c of clientes">
+        <td>{{ c.nombre }}</td>
+        <td>{{ c.dni }}</td>
+        <td>{{ c.telefono }}</td>
+    </tr>
+    </tbody>
+</table>

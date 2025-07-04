@@ -1,0 +1,27 @@
+<p>inventario works!</p>
+<div class="inventario-container">
+    <h2>Inventario</h2>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Producto</th>
+            <th>Categoría</th>
+            <th>Stock</th>
+            <th>Presentación</th>
+            <th>Ubicación</th>
+            <th>Observaciones</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let item of inventario">
+            <td>{{ item.nombre }}</td>
+            <td>{{ item.categoria }}</td>
+            <td [ngClass]="{'poco': item.stock <= 3}">{{ item.stock }}</td>
+            <td>{{ item.presentacion }}</td>
+            <td>{{ item.ubicacion }}</td>
+            <td>{{ item.observaciones }}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>

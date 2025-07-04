@@ -1,0 +1,42 @@
+<p>ventas works!</p>
+<div class="ventas-container">
+    <!-- Sección de productos -->
+    <div class="productos-lista">
+        <h3>Productos disponibles</h3>
+        <div class="productos-grid">
+            <div class="producto" *ngFor="let p of productos" (click)="agregarAlCarrito(p)">
+                <img [src]="p.imagen" alt="{{p.nombre}}">
+                <div class="nombre">{{ p.nombre }}</div>
+                <div class="precio">S/ {{ p.precio }}</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carrito -->
+    <div class="carrito">
+        <h3>Carrito</h3>
+        <table>
+            <thead>
+            <tr>
+                <th>Producto</th>
+                <th>Cant.</th>
+                <th>Precio</th>
+                <th>SubTotal</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let c of carrito">
+                <td>{{ c.nombre }}</td>
+                <td>{{ c.cantidad }}</td>
+                <td>{{ c.precio }}</td>
+                <td>{{ c.precio * c.cantidad }}</td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="total">
+            Total: <strong>S/ {{ calcularTotal() }}</strong>
+        </div>
+        <button (click)="finalizarVenta()">Finalizar Venta</button>
+    </div>
+</div>
+

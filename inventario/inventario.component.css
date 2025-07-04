@@ -1,0 +1,30 @@
+.inventario-container {
+    background-color: #111;
+    color: #ffd700;
+    padding: 30px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #1c1c1c;
+    color: white;
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.2);
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #333;
+    text-align: center;
+}
+
+.poco {
+    color: red;
+    font-weight: bold;
+}
